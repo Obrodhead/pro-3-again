@@ -25,7 +25,7 @@ function Header() {
               src='/static/logo.svg'
               style={{ marginRight: '1em' }}
             />
-            HealthyConnect
+            ReactReserve
           </Menu.Item>
         </Link>
 
