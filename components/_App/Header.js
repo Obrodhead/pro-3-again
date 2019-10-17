@@ -25,7 +25,7 @@ function Header() {
               src='/static/logo.svg'
               style={{ marginRight: '1em' }}
             />
-            ReactReserve
+            Eat-2-Fit
           </Menu.Item>
         </Link>
 
