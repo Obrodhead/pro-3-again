@@ -20,11 +20,6 @@ function Header() {
       <Container text>
         <Link href='/'>
           <Menu.Item header active={isActive('/')}>
-            <Image
-              size='mini'
-              src='/static/logo.svg'
-              style={{ marginRight: '1em' }}
-            />
             Eat-2-Fit
           </Menu.Item>
         </Link>
