@@ -3,7 +3,7 @@ module.exports = {
   env: {
     MONGO_SRV:
       'mongodb+srv://meldee:mel1234@eat-2-fit-gofbv.mongodb.net/test?retryWrites=true&w=majority',
-    JWT_SECRET: '<insert here>',
+    JWT_SECRET: 'meldee',
     CLOUDINARY_URL: 'https://api.cloudinary.com/v1_1/drohkty8r/image/upload',
     STRIPE_SECRET_KEY: '<insert here>'
   }
