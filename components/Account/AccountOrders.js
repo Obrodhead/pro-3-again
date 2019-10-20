@@ -9,6 +9,7 @@ import {
   Image
 } from 'semantic-ui-react';
 import { useRouter } from 'next/router';
+import formatDate from '../../utils/formatDate';
 
 function AccountOrders({ orders }) {
   const router = useRouter();
@@ -17,7 +18,7 @@ function AccountOrders({ orders }) {
     return orders.map(order => ({
       key: order._id,
       title: {
-        content: <Label color='blue' content={order.createdAt} />
+        content: <Label color='red' content={formatDate(order.createdAt)} />
       },
       content: {
         content: (
@@ -34,7 +35,7 @@ function AccountOrders({ orders }) {
             </List.Header>
             <List>
               {order.products.map(p => (
-                <List.Item>
+                <List.Item key={p.product._id}>
                   <Image avatar src={p.product.mediaUrl} />
                   <List.Content>
                     <List.Header>{p.product.name}</List.Header>
@@ -58,10 +59,7 @@ function AccountOrders({ orders }) {
 
   return (
     <>
-      <Header as='h2'>
-        <Icon name='folder open' />
-        Order History
-      </Header>
+      <Header as='h2'>Order History</Header>
       {orders.length === 0 ? (
         <Segment inverted tertiary color='grey' textAlign='center'>
           <Header icon>
