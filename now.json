@@ -1,7 +1,7 @@
 {
   "name": "eat-2-fit",
   "alias": "eat-2-fit.now.sh",
-  "version": 1,
+  "version": 2,
   "env": {
     "MONGO_SRV": "mongodb+srv://meldee:mel1234@eat-2-fit-gofbv.mongodb.net/test?retryWrites=true&w=majority",
     "JWT_SECRET": "meldee",
