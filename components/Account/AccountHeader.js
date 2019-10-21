@@ -13,7 +13,6 @@ function AccountHeader({ role, email, name, createdAt }) {
       />
       <Header inverted textAlign='center' as='h1' icon>
         {name}
-        <Header.Subheader>{email}</Header.Subheader>
       </Header>
     </Segment>
   );

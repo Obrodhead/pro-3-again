@@ -23,15 +23,7 @@ function AccountOrders({ orders }) {
       content: {
         content: (
           <>
-            <List.Header as='h3'>
-              Total: ${order.total}
-              <Label
-                content={order.email}
-                basic
-                horizontal
-                style={{ marginLeft: '1em' }}
-              />
-            </List.Header>
+            <List.Header as='h3'>Total: ${order.total}</List.Header>
             <List>
               {order.products.map(p => (
                 <List.Item key={p.product._id}>
@@ -43,8 +35,8 @@ function AccountOrders({ orders }) {
                     </List.Description>
                   </List.Content>
                   <List.Content floated='right'>
-                    <Label tag color='red' size='tiny'>
-                      {p.product.sku}
+                    <Label tag size='large'>
+                      {p.product.description}
                     </Label>
                   </List.Content>
                 </List.Item>
