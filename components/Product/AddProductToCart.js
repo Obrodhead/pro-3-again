@@ -50,14 +50,14 @@ function AddProductToCart({ user, productId }) {
           ? {
               color: 'blue',
               content: 'Item Added!',
-              icon: 'plus cart',
+
               disabled: true
             }
           : user
           ? {
               color: 'orange',
               content: 'Add to Cart',
-              icon: 'plus cart',
+
               loading,
               disabled: loading,
               onClick: handleAddProductToCart
@@ -65,7 +65,7 @@ function AddProductToCart({ user, productId }) {
           : {
               color: 'blue',
               content: 'Sign Up To Purchase',
-              icon: 'signup',
+
               onClick: () => router.push('/signup')
             }
       }

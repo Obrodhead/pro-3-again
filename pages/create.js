@@ -76,7 +76,6 @@ function CreateProduct() {
   return (
     <>
       <Header as='h2' block>
-        <Icon name='add' color='orange' />
         Create New Product
       </Header>
       <Form

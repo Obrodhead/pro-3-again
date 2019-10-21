@@ -27,7 +27,6 @@ function AccountOrders({ orders }) {
               Total: ${order.total}
               <Label
                 content={order.email}
-                icon='mail'
                 basic
                 horizontal
                 style={{ marginLeft: '1em' }}
