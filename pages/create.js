@@ -125,8 +125,8 @@ function CreateProduct() {
         <Form.Field
           control={TextArea}
           name='description'
-          label='Description'
-          placeholder='Description'
+          label='Nutritional Facts'
+          placeholder='Nutritional Facts'
           onChange={handleChange}
           value={product.description}
         />
@@ -134,7 +134,6 @@ function CreateProduct() {
           control={Button}
           disabled={disabled || loading}
           color='blue'
-          icon='pencil alternate'
           content='Submit'
           type='submit'
         />
