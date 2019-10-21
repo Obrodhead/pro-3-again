@@ -46,18 +46,12 @@ function Signup() {
 
   return (
     <>
-      <Message
-        attached
-        header='Welcome Back!'
-        content='Log in with email and password'
-        color='blue'
-      />
+      <Message attached header='Welcome Back!' />
       <Form error={Boolean(error)} loading={loading} onSubmit={handleSubmit}>
         <Message error header='Oops!' content={error} />
         <Segment>
           <Form.Input
             fluid
-            iconPosition='left'
             label='Email'
             placeholder='Email'
             name='email'
@@ -67,7 +61,6 @@ function Signup() {
           />
           <Form.Input
             fluid
-            iconPosition='left'
             label='Password'
             placeholder='Password'
             name='password'

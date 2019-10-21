@@ -57,7 +57,7 @@ function CartItemList({ products, user, handleRemoveFromCart, success }) {
               View Products
             </Button>
           ) : (
-            <Button color='blue' onClick={() => router.push('/login')}>
+            <Button color='red' onClick={() => router.push('/login')}>
               Login to Add Products
             </Button>
           )}
