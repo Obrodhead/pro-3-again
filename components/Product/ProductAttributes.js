@@ -20,7 +20,7 @@ function ProductAttributes({ description, _id, user }) {
 
   return (
     <>
-      <Header as='h3'>About this product</Header>
+      <Header as='h3'>Nutritional Facts</Header>
       <p>{description}</p>
       {isRootOrAdmin && (
         <>
