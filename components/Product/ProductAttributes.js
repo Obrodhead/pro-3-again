@@ -25,6 +25,7 @@ function ProductAttributes({ description, _id, user }) {
       {isRootOrAdmin && (
         <>
           <Button
+            icon='trash alternate outline'
             color='red'
             content='Delete Product'
             onClick={() => setModal(true)}
@@ -38,6 +39,7 @@ function ProductAttributes({ description, _id, user }) {
               <Button onClick={() => setModal(false)} content='Cancel' />
               <Button
                 negative
+                icon='trash'
                 labelPosition='right'
                 content='Delete'
                 onClick={handleDelete}
