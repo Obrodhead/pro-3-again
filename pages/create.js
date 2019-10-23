@@ -57,13 +57,12 @@ function CreateProduct() {
     try {
       event.preventDefault();
       setLoading(true);
+      setError('');
       const mediaUrl = await handleImageUpload();
-      console.log({ mediaUrl });
       const url = `${baseUrl}/api/product`;
       const { name, price, description } = product;
       const payload = { name, price, description, mediaUrl };
-      const response = await axios.post(url, payload);
-      console.log({ response });
+      await axios.post(url, payload);
       setProduct(INITIAL_PRODUCT);
       setSuccess(true);
     } catch (error) {
@@ -76,6 +75,7 @@ function CreateProduct() {
   return (
     <>
       <Header as='h2' block>
+        <Icon name='add' color='orange' />
         Create New Product
       </Header>
       <Form
@@ -125,8 +125,8 @@ function CreateProduct() {
         <Form.Field
           control={TextArea}
           name='description'
-          label='Nutritional Facts'
-          placeholder='Nutritional Facts'
+          label='Description'
+          placeholder='Description'
           onChange={handleChange}
           value={product.description}
         />
@@ -134,6 +134,7 @@ function CreateProduct() {
           control={Button}
           disabled={disabled || loading}
           color='blue'
+          icon='pencil alternate'
           content='Submit'
           type='submit'
         />
