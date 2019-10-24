@@ -75,7 +75,6 @@ function CreateProduct() {
   return (
     <>
       <Header as='h2' block>
-        <Icon name='add' color='orange' />
         Create New Product
       </Header>
       <Form
@@ -134,7 +133,6 @@ function CreateProduct() {
           control={Button}
           disabled={disabled || loading}
           color='blue'
-          icon='pencil alternate'
           content='Submit'
           type='submit'
         />
