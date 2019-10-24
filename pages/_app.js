@@ -4,7 +4,7 @@ import { parseCookies, destroyCookie } from 'nookies';
 import { redirectUser } from '../utils/auth';
 import baseUrl from '../utils/baseUrl';
 import axios from 'axios';
-import { Router } from 'next/router';
+import Router from 'next/router';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -55,6 +55,7 @@ class MyApp extends App {
 
   syncLogout = event => {
     if (event.key === 'logout') {
+      console.log('logged out from storage');
       Router.push('/login');
     }
   };

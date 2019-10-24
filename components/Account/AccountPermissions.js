@@ -22,7 +22,10 @@ function AccountPermissions() {
 
   return (
     <div style={{ margin: '2em 0' }}>
-      <Header as='h2'>User Permissions</Header>
+      <Header as='h2'>
+        <Icon name='settings' />
+        User Permissions
+      </Header>
       <Table compact celled definition>
         <Table.Header>
           <Table.Row>

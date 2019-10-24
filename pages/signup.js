@@ -47,12 +47,20 @@ function Signup() {
 
   return (
     <>
-      <Message attached header='Get Started!' content='Create a new account' />
+      <Message
+        attached
+        icon='settings'
+        header='Get Started!'
+        content='Create a new account'
+        color='teal'
+      />
       <Form error={Boolean(error)} loading={loading} onSubmit={handleSubmit}>
         <Message error header='Oops!' content={error} />
         <Segment>
           <Form.Input
             fluid
+            icon='user'
+            iconPosition='left'
             label='Name'
             placeholder='Name'
             name='name'
@@ -61,6 +69,8 @@ function Signup() {
           />
           <Form.Input
             fluid
+            icon='envelope'
+            iconPosition='left'
             label='Email'
             placeholder='Email'
             name='email'
@@ -70,6 +80,8 @@ function Signup() {
           />
           <Form.Input
             fluid
+            icon='lock'
+            iconPosition='left'
             label='Password'
             placeholder='Password'
             name='password'
